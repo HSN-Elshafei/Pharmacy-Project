@@ -1,0 +1,122 @@
+
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 form-container">
+				<div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+					<div class="logo mt-5 mb-3">
+						<img src='https://cdn-icons-png.flaticon.com/128/5721/5721113.png' width="150px">
+					</div>
+					<div class="heading mb-3">
+						<h4>Create an account</h4>
+					</div>
+					<form [formGroup]="myForm" class="row g-3" (ngSubmit)="onSubmit()">
+						<div class="form-input">
+							<span><i class="fa fa-user"></i></span>
+							<input type="text" placeholder="Full Name" formControlName="name">
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-user-circle"></i></span>
+							<input type="text" placeholder="User Name" formControlName="userName">
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-envelope"></i></span>
+							<input type="email" placeholder="Email Address" formControlName="email">
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-lock"></i></span>
+							<input type="password" placeholder="Password" formControlName="password">
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-location-arrow"></i></span>
+							<input type="text" placeholder="Address" formControlName="address">
+						</div>
+						<div class="row mb-3">
+							<div class="col-12 d-flex">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="cb1">
+									<label class="custom-control-label text-white" for="cb1">I agree all terms &
+										conditions</label>
+								</div>
+							</div>
+						</div>
+						<div class="text-left mb-3">
+							<button type="submit" class="btn" [disabled]="myForm.invalid">Register</button>
+						</div>
+						
+						<div class="text-white mb-3">or register with</div>
+						<div class="row mb-3">
+							<div class="col-4">
+								<a href="" class="btn btn-block btn-social btn-facebook">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="" class="btn btn-block btn-social btn-google">
+									<i class="fa fa-google"></i>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="" class="btn btn-block btn-social btn-twitter">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+						</div>
+						<div class="text-white">Already have an account?
+							<a routerLink="login" class="login-link">Login here</a>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-6 d-none d-md-block image-container"></div>
+		</div>
+	</div>
+</body>
+
+
+<!-- <div class="container">
+    <br>
+    <form [formGroup]="myForm" class="row g-3" (ngSubmit)="onSubmit()">
+        <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <label class="form-label">User Name</label>
+            <input type="text" class="form-control" formControlName="userName">
+        </div>
+
+
+        <div class="col-md-12">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control"  formControlName="password">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control"  name="passwordv" formControlName="passwordv">
+        </div>
+
+
+        <div class="col-12">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" formControlName="address">
+        </div>
+
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary"
+                [disabled]="myForm.invalid || myForm.value.password!=myForm.value.passwordv">Create Account</button>
+        </div> 
+    </form>
+</div> -->
